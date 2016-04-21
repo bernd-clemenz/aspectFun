@@ -4,6 +4,13 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
+/**
+ * An sample aspect showing some features of AspectJ like hooking into a
+ * 'interface' method.
+ * 
+ * @author Bernd Clemenz
+ * @version 1.0.0
+ */
 @Aspect
 public class CSampleAspect
 {
