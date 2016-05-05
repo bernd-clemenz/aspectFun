@@ -80,4 +80,19 @@ public class CSampleAspect
     System.out.println("\n---->>> GENERAL SAMPLE MONITORING ASPECT");
     return oJp.proceed();
   }
+  //----------------------------------------------------------------------------
+  @Around("execution(* *(..)) && @annotation(de.isc.af.ProfileMe)")
+  public Object profile(final ProceedingJoinPoint oJp)
+  throws Throwable
+  {
+    System.out.println("\n---->>> GENERAL SAMPLE MONITORING ASPECT");
+    
+    long start = System.currentTimeMillis();
+    Object result = oJp.proceed();
+    long end = System.currentTimeMillis();
+    
+    System.out.println("Duration (ms): " + (end - start));
+    
+    return result;
+  }
 }

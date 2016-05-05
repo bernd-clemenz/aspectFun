@@ -27,6 +27,12 @@
  */
 package de.isc.af;
 
+/**
+ * A very simple abstract class.
+ * 
+ * @author Bernd Clemenz
+ *
+ */
 public abstract class ASample
 {
 

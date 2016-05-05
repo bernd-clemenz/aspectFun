@@ -27,6 +27,12 @@
  */
 package de.isc.af;
 
+/**
+ * An simple example interface.
+ * 
+ * @author Bernd Clemenz
+ *
+ */
 public interface ISample
 {
   Object process();

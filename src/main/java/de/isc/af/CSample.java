@@ -27,6 +27,14 @@
  */
 package de.isc.af;
 
+import java.util.Random;
+
+/**
+ * To this class the aspects are applied to.
+ * 
+ * @author Bernd Clemenz
+ *
+ */
 public class CSample extends ASample 
                      implements ISample
 {
@@ -45,10 +53,23 @@ public class CSample extends ASample
     return "Some other test";
   }
 
+  @ProfileMe
   @Override
   public Object withParam(final String x)
   {
-    // TODO Auto-generated method stub
+    Random rnd = new Random();
+    int wait = rnd.nextInt(3000);
+    
+    try
+    {
+      Thread.sleep((long) wait);
+    }
+    catch(InterruptedException oX)
+    {
+      // ignored
+    }
+    
+    System.out.println("Processing SAMPLE with parameter");
     return "Param test";
   }
 
